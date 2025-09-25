@@ -1,0 +1,325 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif; */
+  font-family: 'Shippori Mincho', serif;
+  /* font-family: 'Cormorant Garamond', serif;
+  font-family: 'Zen Old Mincho', serif; */
+  font-feature-settings: 'palt' 1;
+  letter-spacing: .1em;
+  color: #fff;
+  background-color: #181818;
+}
+
+@media screen and (min-width: 320px) {
+  /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
+
+  .pc-nav {
+    display: none;
+  }
+
+  /*==============================================================
+    　　ヘッダー
+  ==============================================================*/
+  .header {
+    position: fixed;
+    /* width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 26px 0;
+    top: 0; */
+    z-index: 20;
+  }
+
+  .header .logo-box {
+    display: flex;
+    align-items: center;
+
+    /* width: 38.28vw; */
+    height: 13.8vw;
+    position: fixed;
+    top: 4.04vw;
+    left: 5.08vw;
+    z-index: 2;
+  }
+
+  .logo-box.active {
+    display: none;
+  }
+
+  .logo-box img {
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .logo-box a {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-box .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: 3px;
+  }
+
+  .btn {
+    width: 14.32vw;
+    height: 14.32vw;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: fixed;
+    top: 4.17vw;
+    right: 5.21vw;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .btn span {
+    width: 6.77vw;
+    height: 2.34vw;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+  }
+
+  .btn span:after,
+  .btn span:before {
+    content: "";
+    width: 100%;
+    height: .26vw;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+  }
+
+  .btn span:after {
+    bottom: 0;
+  }
+
+  .btn.active span:before {
+    transform: translateY(4px) rotate(45deg);
+    width: 25px;
+    margin-right: 2.5px;
+  }
+
+  .btn.active span:after {
+    transform: translateY(-4px) rotate(-45deg);
+    width: 25px;
+    margin-right: 2.5px;
+  }
+
+  /* メニューのデザイン*/
+  .container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background: #181818;
+    transition: .5s;
+    opacity: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    pointer-events: none;
+  }
+
+  .container.active{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-list {
+    padding: 36.46vw 10.42vw 16.67vw;
+  }
+
+  .nav-item {
+    font-size: 3.65vw;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+
+  /*==============================================================
+    　　フッター
+  ==============================================================*/
+  .footer {
+    padding-top: 12.89vw;
+    padding-bottom: 11.72vw;
+    position: relative;
+    overflow: hidden;
+    perspective: 1px;
+  }
+
+  .footer:before {
+    content: "";
+    width: 260.42vw;
+    height: 130.21vw;
+    background: rgba(255, 255, 255, .03);
+    border-radius: 130.21vw 130.21vw 0 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .foot-bg {
+    padding-left: 5.21vw;
+    padding-right: 5.21vw;
+  }
+
+  .footer .logo-box {
+    position: relative;
+    width: 177px;
+    margin: 0 auto 10.16vw;
+  }
+
+  .footer .logo-box img {
+    height: 59px;
+  }
+
+  .footer .logo-box .logo {
+    font-size: 24px;
+    margin-top: 3px;
+  }
+
+  .footer .link-box {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4.3vw;
+    font-size: 3.65vw;
+    padding: 0 5.21vw;
+    line-height: 1.8;
+  }
+
+  .footer .link-box .policy {
+    width: 100%;
+    white-space: nowrap;
+    padding-top: .65vw;
+    margin-bottom: 4.3vw;
+    font-size: 3.91vw;
+    color: rgba(255, 255, 255, .3);
+  }
+
+  /* .footer .link-box .page-link {
+    margin-bottom: 4.3vw;
+  }
+
+  .footer .link-box .page-link a {
+    display: block;
+    line-height: 1.8;
+  }
+
+  .footer .link-box .page-link.policy {
+    width: 37.11vw;
+  }
+
+  .footer .link-box .page-link.policy a {
+    font-weight: 500;
+    font-size: 3.65vw;
+    position: relative;
+  }
+
+  .footer .link-box li:not(.policy) a:before {
+    content: "";
+    width: .91vw;
+    height: .91vw;
+    background: currentColor;
+    border-radius: 50%;
+    position: absolute;
+    top: -3.52vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    transition: opacity .5s;
+    will-change: opacity;
+  } */
+
+  .footer .copy {
+    font-size: 2.6vw;
+    line-height: 1.8;
+    letter-spacing: .1em;
+    color: rgba(255, 255, 255, .3);
+    text-align: center;
+    padding-top: 11.59vw;
+  }
+
+
+
+
+}
+
+
+@media screen and (min-width: 640px) {
+  /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
+
+  .sp-nav {
+    display: none;
+  }
+
+  .pc-nav {
+    display: block;
+  }
+
+  /*==============================================================
+    　　TB_ヘッダー
+  ==============================================================*/
+  .header {
+    height: 120px;
+    padding: 0 60px 8px;
+  }
+
+  .header .nav-list {
+    display: flex;
+    padding: 0;
+  }
+
+  .header .nav-item {
+    font-size: 16px;
+    letter-spacing: 0.17em;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    font-weight: bold;
+  }
+
+  .logo-box img {
+    height: 40px;
+    margin-right: 16px;
+  }
+
+  .logo-box .logo {
+   font-size: 24px;
+  }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+    　　PC_ヘッダー
+  ==============================================================*/
+  .logo-box img {
+    height: 44px;
+    margin-right: 20px;
+  }
+
+  .header .nav-item {
+    padding-left: 32px;
+  }
+
+}

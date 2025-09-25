@@ -1,0 +1,515 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media screen and (min-width: 320px) {
+  /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
+
+  .color {
+    color: #ED9E31;
+  }
+
+  /*==============================================================
+    　　ヒーロー
+  ==============================================================*/
+  .sec-hero {
+    /* height: calc(100vh - 80px); */
+    height: 100vh;
+    position: relative;
+  }
+
+  .hero-img {
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+  }
+
+  .hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-title .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 70px;
+  }
+
+  .hero-title .title-jp {
+    font-weight: 600;
+    font-size: 3.91vw;
+    line-height: 1.8;
+    letter-spacing: .2em;
+    padding-left: 2.6vw;
+    filter: drop-shadow(0 0 1.82vw #000);
+  }
+
+  .hero-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25.39vw;
+    height: 25.39vw;
+    background: #f7920e;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 3.71vw;
+    line-height: 1.2;
+    letter-spacing: .1em;
+    text-align: center;
+    position: absolute;
+    bottom: 5.21vw;
+    right: 4.17vw;
+    padding-top: .52vw;
+  }
+
+  .hero-link:before {
+    content: "";
+    width: 4.56vw;
+    height: 4.3vw;
+    background: url(../img/icon-tel-02.webp) no-repeat;
+    background-size: contain;
+    position: relative;
+    top: -1.43vw;
+    margin-bottom: 2px;
+  }
+
+  /*==============================================================
+    　　共通
+  ==============================================================*/
+  .sec img {
+    width: 300px;
+  }
+
+  /*=============== 　　見出し　　===============*/
+  /* 縦 タイトル */
+  .sec-about .sec-title,
+  .sec-menu .sec-title,
+  .sec-dummy .sec-title {
+    display: flex;
+    justify-content: center;
+    padding-right: .65vw;
+  }
+
+  .sec-menu .sec-title,
+  .sec-dummy .sec-title {
+    padding-left: 3.52vw;
+    padding-right: 0;
+  }
+
+  /* タイトル（日本語） */
+  .sec-title .title-jp {
+    font-weight: 600;
+    font-size: 7.29vw;
+    line-height: 1.52;
+    margin-right: 1.04vw;
+    writing-mode: unset;
+    letter-spacing: .1em;
+  }
+
+  /* 縦 タイトル（日本語） */
+  .sec-about .sec-title .title-jp,
+  .sec-menu .sec-title .title-jp,
+  .sec-dummy .sec-title .title-jp {
+    writing-mode: tb-rl;
+    letter-spacing: 0;
+  }
+
+
+  /* タイトル（英語） */
+  .sec-title .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 4.17vw;
+    line-height: 1.2;
+    letter-spacing: .1em;
+    color: #ED9E31;
+    padding-top: 3.78vw;
+    position: relative;
+  }
+
+  /* 縦 タイトル（英語） */
+  .sec-about .sec-title .title,
+  .sec-menu .sec-title .title,
+  .sec-dummy .sec-title .title {
+    writing-mode: tb-rl;
+  }
+
+  /* 横 タイトル（英語） */
+  .sec-shop .sec-title .title,
+  .sec-news .sec-title .title {
+    writing-mode: unset;
+    padding-top: 0;
+    padding-left: 2.73vw;
+    margin-bottom: -.52vw;
+  }
+
+  /* ドット */
+  .sec-about .sec-title .title:before,
+  .sec-menu .sec-title .title:before,
+  .sec-dummy .sec-title .title:before {
+    content: "";
+    width: 1.17vw;
+    height: 1.17vw;
+    background: currentColor;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.17vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .sec-shop .sec-title .title:before,
+  .sec-news .sec-title .title:before {
+    content: "";
+    width: 1.17vw;
+    height: 1.17vw;
+    background: currentColor;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    margin: auto;
+  }
+
+  /*=============== 　　ボタン　　===============*/
+  .btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 156px;
+    margin: 0 auto;
+  }
+
+  .btn-box .more-btn {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 1.04vw 5.99vw .52vw;
+    background: 0 0;
+    border: 0;
+    border-bottom: 1px solid #ED9E31;
+    cursor: pointer;
+    color: #fff;
+    font-size: 4.17vw;
+    line-height: 5.86vw;
+    font-weight: 500;
+    letter-spacing: .1em;
+    transition: color .3s ease-out;
+    will-change: color;
+  }
+
+  .btn-box .more-btn span {
+    flex: 1;
+    padding-inline-end: 1.3vw;
+    text-align: left;
+  }
+
+  .btn-box .more-btn .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.86vw;
+    height: 5.86vw;
+    flex-shrink: 0;
+    transform: translateZ(0);
+    border: .26vw solid #ED9E31;
+    border-radius: 50%;
+    background-image: url(../img/arrow.webp);
+    background-repeat: no-repeat;
+    background-size: 1.95vw 1.95vw;
+    background-position: center center;
+    transition: transform .3s ease-out;
+    will-change: transform;
+  }
+
+  /*==============================================================
+    　　About
+  ==============================================================*/
+  .sec-about {
+    padding-top: 14.58vw;
+    padding-bottom: 14.58vw;
+    position: relative;
+    perspective: 1px;
+    padding-left: 5.21vw;
+    padding-right: 5.21vw;
+  }
+
+  .sec-about .text {
+    font-family: 'Zen Old Mincho', serif;
+    font-weight: 400;
+    font-size: 4.17vw;
+    line-height: 2.3;
+    letter-spacing: .1em;
+    margin-top: 4.95vw;
+    margin-bottom: 10.03vw;
+  }
+
+
+  /*==============================================================
+    　　Menu　メニュー
+  ==============================================================*/
+  .sec-menu {
+    padding-top: 14.58vw;
+    padding-bottom: 17.19vw;
+    position: relative;
+    perspective: 1px;
+    overflow: hidden;
+  }
+
+  .sec-menu:before {
+    content: "";
+    width: 260.42vw;
+    height: 130.21vw;
+    /* background: rgba(255, 255, 255, .03); */
+    background: #242424;
+    border-radius: 130.21vw 130.21vw 0 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  /* 下側に反転した形を追加 */
+  .sec-menu:after {
+    content: "";
+    width: 260.42vw;
+    height: 130.21vw;
+    background: #242424;
+    /* 上下を反転させる */
+    border-radius: 0 0 130.21vw 130.21vw;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .menu-bg {
+    padding-left: 5.21vw;
+    padding-right: 5.21vw;
+    background: #242424;
+  }
+
+  .menu-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 9.51vw;
+    margin-bottom: 3.13vw;
+  }
+
+  .menu-item {
+    margin-bottom: 8.46vw;
+  }
+
+  .menu-box .menu-img {
+    width: 100%;
+    height: 56.77vw;
+    overflow: hidden;
+  }
+
+  .menu-box .menu-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .menu-item .title {
+    font-size: 6.25vw;
+    margin: 3.13vw 0 .78vw;
+  }
+
+  .menu-item .text {
+    font-size: 3.65vw;
+    line-height: 1.8;
+  }
+
+  /*=============== 　　minメニュー　　===============*/
+  .item-min {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3.13vw;
+  }
+
+  .item-min .menu-item {
+    width: 42.71vw;
+    margin-bottom: 5.47vw;
+  }
+
+  .item-min .menu-img {
+    height: 27.08vw;
+  }
+
+  .item-min .title {
+    font-weight: 500;
+    font-size: 4.43vw;
+    line-height: 1.6;
+    letter-spacing: .1em;
+    margin-top: 2.21vw;
+    margin-bottom: .52vw;
+  }
+
+  .item-min .text {
+    font-size: 3.39vw;
+    line-height: 1.8;
+  }
+
+  /*==============================================================
+    　　Dummy　ダミー
+  ==============================================================*/
+  .sec-dummy {
+    padding-top: 13.8vw;
+    padding-left: 5.21vw;
+    padding-right: 5.21vw;
+  }
+
+  .dummy-box {
+    margin-top: 10.16vw;
+  }
+
+  .dummy-box .dummy-img {
+    width: 100%;
+    height: 64.8vw;
+    margin-bottom: 7.29vw;
+    overflow: hidden;
+  }
+
+  .dummy-box .dummy-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .dummy-box .title {
+    font-weight: 500;
+    font-size: 6.25vw;
+    line-height: 1.6;
+    letter-spacing: .1em;
+    margin-bottom: 3.91vw;
+    margin-right: -.91vw;
+  }
+
+  .dummy-box .text {
+    font-size: 3.65vw;
+    line-height: 1.8;
+    margin-bottom: 8.33vw;
+  }
+
+  /*==============================================================
+    　　Shop　店内紹介
+  ==============================================================*/
+  .sec-shop {
+    padding-top: 17.71vw;
+    position: relative;
+    padding-left: 5.21vw;
+    padding-right: 5.21vw;
+  }
+
+  .shop-box {
+    margin-top: 8.07vw;
+    margin-bottom: 10.42vw;
+  }
+
+  .shop-img {
+    width: 100%;
+    height: 56.77vw;
+    /* height: auto; */
+    overflow: hidden;
+    /* aspect-ratio: 1 / 1; */
+    margin-top: 3.65vw;
+  }
+
+  .shop-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /*==============================================================
+    　　News　お知らせ
+  ==============================================================*/
+  .sec-news {
+    padding-top: 14.58vw;
+    padding-bottom: 2.6vw;
+    padding-left: 5.21vw;
+    padding-right: 5.21vw;
+  }
+
+  .news-box {
+    margin-top: 7.81vw;
+    margin-bottom: 10.42vw;
+  }
+
+  .news-box .news-item {
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    padding: 4.43vw 0 3.39vw;
+  }
+
+  .news-box .news-item time {
+    display: block;
+    font-weight: 500;
+    font-size: 3.13vw;
+    line-height: 1.2;
+    letter-spacing: .1em;
+    margin-bottom: 1.17vw;
+  }
+
+  .news-box .news-item p {
+    font-size: 3.65vw;
+    line-height: 1.8;
+  }
+
+  .dummy-box .text {
+    font-size: 3.65vw;
+    line-height: 1.8;
+    margin-bottom: 8.33vw;
+  }
+
+
+
+
+}
+
+
+@media screen and (min-width: 640px) {
+  /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
+
+  /*==============================================================
+    　　TB_ヒーロー
+  ==============================================================*/
+  .sec-hero {
+    margin-top: 120px;
+    height: calc(100vh - 120px);
+  }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+    　　PC_ヒーロー
+  ==============================================================*/
+
+}
