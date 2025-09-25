@@ -237,6 +237,7 @@
     background-position: center center;
     transition: transform .3s ease-out;
     will-change: transform;
+    margin-top: 0.2px;
   }
 
   /*==============================================================
@@ -431,10 +432,10 @@
 
   .shop-img {
     width: 100%;
-    height: 56.77vw;
-    /* height: auto; */
+    /* height: 56.77vw; */
+    height: auto;
     overflow: hidden;
-    /* aspect-ratio: 1 / 1; */
+    aspect-ratio: 1 / 1;
     margin-top: 3.65vw;
   }
 
