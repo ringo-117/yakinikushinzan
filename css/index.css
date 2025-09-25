@@ -98,14 +98,14 @@
   /* 縦 タイトル */
   .sec-about .sec-title,
   .sec-menu .sec-title,
-  .sec-dummy .sec-title {
+  .sec-commit .sec-title {
     display: flex;
     justify-content: center;
     padding-right: .65vw;
   }
 
   .sec-menu .sec-title,
-  .sec-dummy .sec-title {
+  .sec-commit .sec-title {
     padding-left: 3.52vw;
     padding-right: 0;
   }
@@ -123,7 +123,7 @@
   /* 縦 タイトル（日本語） */
   .sec-about .sec-title .title-jp,
   .sec-menu .sec-title .title-jp,
-  .sec-dummy .sec-title .title-jp {
+  .sec-commit .sec-title .title-jp {
     writing-mode: tb-rl;
     letter-spacing: 0;
   }
@@ -144,7 +144,7 @@
   /* 縦 タイトル（英語） */
   .sec-about .sec-title .title,
   .sec-menu .sec-title .title,
-  .sec-dummy .sec-title .title {
+  .sec-commit .sec-title .title {
     writing-mode: tb-rl;
   }
 
@@ -160,7 +160,7 @@
   /* ドット */
   .sec-about .sec-title .title:before,
   .sec-menu .sec-title .title:before,
-  .sec-dummy .sec-title .title:before {
+  .sec-commit .sec-title .title:before {
     content: "";
     width: 1.17vw;
     height: 1.17vw;
@@ -375,32 +375,32 @@
   }
 
   /*==============================================================
-    　　Dummy　ダミー
+    　　Commitment　こだわり
   ==============================================================*/
-  .sec-dummy {
+  .sec-commit {
     padding-top: 13.8vw;
     padding-left: 5.21vw;
     padding-right: 5.21vw;
   }
 
-  .dummy-box {
+  .commit-box {
     margin-top: 10.16vw;
   }
 
-  .dummy-box .dummy-img {
+  .commit-box .commit-img {
     width: 100%;
     height: 64.8vw;
     margin-bottom: 7.29vw;
     overflow: hidden;
   }
 
-  .dummy-box .dummy-img img {
+  .commit-box .commit-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .dummy-box .title {
+  .commit-box .title {
     font-weight: 500;
     font-size: 6.25vw;
     line-height: 1.6;
@@ -409,7 +409,7 @@
     margin-right: -.91vw;
   }
 
-  .dummy-box .text {
+  .commit-box .text {
     font-size: 3.65vw;
     line-height: 1.8;
     margin-bottom: 8.33vw;
