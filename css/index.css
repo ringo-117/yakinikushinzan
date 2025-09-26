@@ -124,7 +124,7 @@
   .sec-about .sec-title .title-jp,
   .sec-menu .sec-title .title-jp,
   .sec-commit .sec-title .title-jp {
-    writing-mode: tb-rl;
+    writing-mode: vertical-rl;
     letter-spacing: 0;
   }
 
@@ -145,7 +145,8 @@
   .sec-about .sec-title .title,
   .sec-menu .sec-title .title,
   .sec-commit .sec-title .title {
-    writing-mode: tb-rl;
+    /* writing-mode: tb-rl; */
+    writing-mode: vertical-rl;
   }
 
   /* 横 タイトル（英語） */
