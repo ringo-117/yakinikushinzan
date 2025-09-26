@@ -15,7 +15,8 @@ body {
 @media screen and (min-width: 320px) {
   /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
 
-  .pc-nav {
+  .pc-nav,
+  .pc-only {
     display: none;
   }
 
@@ -214,41 +215,6 @@ body {
     color: rgba(255, 255, 255, .3);
   }
 
-  /* .footer .link-box .page-link {
-    margin-bottom: 4.3vw;
-  }
-
-  .footer .link-box .page-link a {
-    display: block;
-    line-height: 1.8;
-  }
-
-  .footer .link-box .page-link.policy {
-    width: 37.11vw;
-  }
-
-  .footer .link-box .page-link.policy a {
-    font-weight: 500;
-    font-size: 3.65vw;
-    position: relative;
-  }
-
-  .footer .link-box li:not(.policy) a:before {
-    content: "";
-    width: .91vw;
-    height: .91vw;
-    background: currentColor;
-    border-radius: 50%;
-    position: absolute;
-    top: -3.52vw;
-    left: 0;
-    right: 0;
-    margin: auto;
-    opacity: 0;
-    transition: opacity .5s;
-    will-change: opacity;
-  } */
-
   .footer .copy {
     font-size: 2.6vw;
     line-height: 1.8;
@@ -278,7 +244,7 @@ body {
   /*==============================================================
     　　TB_ヘッダー
   ==============================================================*/
-  .header {
+  /* .header {
     height: 120px;
     padding: 0 60px 8px;
   }
@@ -304,23 +270,164 @@ body {
 
   .logo-box .logo {
    font-size: 24px;
-  }
+  } */
 
 }
 
 
 @media screen and (min-width: 1024px) {
   /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
+
+  .pc-only {
+    display: block;
+  }
+
+  .pc-none {
+    display: none;
+  }
+
   /*==============================================================
     　　PC_ヘッダー
   ==============================================================*/
+  .header {
+    width: 100%;
+    height: 10.62vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .header .logo-box {
+    height: 6.01vw;
+    top: 2.27vw;
+    left: 2.86vw;
+  }
+
   .logo-box img {
+    height: 6.01vw;
+    margin-right: 12px;
+  }
+
+  .logo-box .logo {
+    font-size: 2.55vw;
+  }
+
+  .header .nav-list {
+    display: flex;
+    position: fixed;
+    top: 2.27vw;
+    right: 2.86vw;
+    top: 4vw;
+    padding: 0;
+    flex-direction: row-reverse;
+  }
+
+  .header .nav-list .nav-item {
+    writing-mode: vertical-rl;
+    margin-left: 2.12vw;
+  }
+
+  .header .nav-list .nav-item a {
+    display: block;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: .2em;
+    font-size: 1.17vw;
+  }
+
+  /* .logo-box img {
     height: 44px;
     margin-right: 20px;
   }
 
   .header .nav-item {
     padding-left: 32px;
+  } */
+
+
+  /*==============================================================
+    　　PC_フッター
+  ==============================================================*/
+  .footer {
+    padding-top: 8.28vw;
+    padding-bottom: 5.13vw;
+    margin-top: 10.26vw;
   }
+
+  .footer:before {
+    width: 150vw;
+    height: 75vw;
+    border-radius: 75vw 75vw 0 0;
+  }
+
+  .foot-bg {
+    max-width: 84.98vw;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .footer .logo-box {
+    display: block;
+    /* width: 21.54vw; */
+    width: 22vw;
+    margin: 0 auto 4.4vw;
+  }
+
+  .footer .logo-box img {
+    height: 7.75vw;
+  }
+
+  .footer .logo-box .logo {
+    font-size: 3.1vw;
+  }
+
+  .footer .link-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+
+  .footer .link-box li {
+    writing-mode: vertical-rl;
+    margin-right: 2.34vw;
+  }
+
+  .footer .link-box li.top {
+    margin-right: 0;
+  }
+
+  .footer .link-box li a {
+    font-size: 1.32vw;
+    display: block;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: .2em;
+  }
+
+  .footer .link-box .policy {
+    width: auto;
+    padding-top: 0;
+    margin-bottom: 0;
+    font-size: 1.03vw;
+    margin-right: 2.34vw;
+    padding-right: .73vw;
+  }
+
+  .footer .copy {
+    font-size: .95vw;
+    line-height: 1.8;
+    letter-spacing: .1em;
+    color: rgba(255, 255, 255, .3);
+    text-align: center;
+    padding-top: 4.18vw;
+    margin-top: 3vw;
+  }
+
+
+
+
+
+
 
 }
