@@ -150,7 +150,7 @@
 
   /* 横 タイトル（英語） */
   .sec-shop .sec-title .title,
-  .sec-news .sec-title .title {
+  .sec-info .sec-title .title {
     writing-mode: unset;
     padding-top: 0;
     padding-left: 2.73vw;
@@ -174,7 +174,7 @@
   }
 
   .sec-shop .sec-title .title:before,
-  .sec-news .sec-title .title:before {
+  .sec-info .sec-title .title:before {
     content: "";
     width: 1.17vw;
     height: 1.17vw;
@@ -446,45 +446,41 @@
   }
 
   /*==============================================================
-    　　News　お知らせ
+    　　Info　店舗情報
   ==============================================================*/
-  .sec-news {
+  .sec-info {
     padding-top: 14.58vw;
-    padding-bottom: 2.6vw;
+    /* padding-bottom: 2.6vw; */
     padding-left: 5.21vw;
     padding-right: 5.21vw;
   }
 
-  .news-box {
+  .info-box {
     margin-top: 7.81vw;
-    margin-bottom: 10.42vw;
+    margin-bottom: 24px;
   }
 
-  .news-box .news-item {
-    display: block;
-    border-top: 1px solid rgba(255, 255, 255, .08);
+  .info-box .info-item {
     border-bottom: 1px solid rgba(255, 255, 255, .08);
-    padding: 4.43vw 0 3.39vw;
+    padding: 3.13vw 0 3.39vw;
+    break-inside: avoid;
+    font-size: 3.65vw;
+    line-height: 1.8;
   }
 
-  .news-box .news-item time {
-    display: block;
-    font-weight: 500;
-    font-size: 3.13vw;
-    line-height: 1.2;
-    letter-spacing: .1em;
+  .info-box .info-item dt {
+    font-weight: 700;
     margin-bottom: 1.17vw;
   }
 
-  .news-box .news-item p {
-    font-size: 3.65vw;
-    line-height: 1.8;
+  .info-box .info-item.tel span {
+    margin-left: -8px;
   }
 
-  .dummy-box .text {
-    font-size: 3.65vw;
-    line-height: 1.8;
-    margin-bottom: 8.33vw;
+  .map {
+    height: 56.77vw;
+    height: 64.8vw;
+    margin-bottom: 10.42vw;
   }
 
 

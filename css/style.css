@@ -156,6 +156,7 @@ body {
     position: relative;
     overflow: hidden;
     perspective: 1px;
+    margin-top: 20.83vw;
   }
 
   .footer:before {
