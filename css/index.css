@@ -336,7 +336,8 @@
   .menu-item .title {
     font-size: 6.25vw;
     /* margin: 3.13vw 0 .78vw; */
-    margin: 3.13vw 0 .9vw;
+    margin: 3.13vw 0 1vw;
+    font-weight: 600;
   }
 
   .menu-item .text {
@@ -362,7 +363,7 @@
   }
 
   .item-min .title {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 4.43vw;
     line-height: 1.6;
     letter-spacing: .1em;
