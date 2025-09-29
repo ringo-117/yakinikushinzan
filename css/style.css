@@ -51,9 +51,14 @@ body {
     display: none;
   }
 
-  .logo-box img {
+  .logo-box img.logo-mark {
     height: 50px;
     margin-right: 10px;
+  }
+
+  .logo-box img.logo {
+    height: 27px;
+    margin-bottom: 2px;
   }
 
   .logo-box a {
@@ -61,12 +66,12 @@ body {
     align-items: center;
   }
 
-  .logo-box .logo {
+  /* .logo-box .logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     font-weight: 900;
     margin-top: 3px;
-  }
+  } */
 
   .btn {
     width: 14.32vw;
@@ -180,18 +185,23 @@ body {
 
   .footer .logo-box {
     position: relative;
-    width: 177px;
+    /* width: 177px; */
+    width: 198px;
     margin: 0 auto 10.16vw;
   }
 
-  .footer .logo-box img {
+  .footer .logo-box img.logo-mark {
     height: 59px;
   }
 
-  .footer .logo-box .logo {
+  .footer .logo-box img.logo {
+    height: 30px;
+  }
+
+  /* .footer .logo-box .logo {
     font-size: 24px;
     margin-top: 3px;
-  }
+  } */
 
   .footer .link-box {
     /* display: flex;
@@ -233,7 +243,8 @@ body {
 @media screen and (min-width: 640px) {
   /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
 
-  .sp-nav {
+  .sp-nav,
+  .sp-only {
     display: none;
   }
 
@@ -304,14 +315,18 @@ body {
     left: 2.86vw;
   }
 
-  .logo-box img {
+  .logo-box img.logo-mark {
     height: 6.01vw;
     margin-right: 12px;
   }
 
-  .logo-box .logo {
-    font-size: 2.55vw;
+  .logo-box img.logo {
+    height: 2.76vw;
   }
+
+  /* .logo-box .logo {
+    font-size: 2.55vw;
+  } */
 
   .header .nav-list {
     display: flex;
@@ -370,17 +385,22 @@ body {
   .footer .logo-box {
     display: block;
     /* width: 21.54vw; */
-    width: 22vw;
+    /* width: 22vw; */
+    width: 26vw;
     margin: 0 auto 4.4vw;
   }
 
-  .footer .logo-box img {
+  .footer .logo-box img.logo-mark {
     height: 7.75vw;
   }
 
-  .footer .logo-box .logo {
-    font-size: 3.1vw;
+  .footer .logo-box img.logo {
+    height: 3.9vw;
   }
+
+  /* .footer .logo-box .logo {
+    font-size: 3.1vw;
+  } */
 
   .footer .link-box {
     display: flex;

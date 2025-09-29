@@ -42,14 +42,20 @@
     width: 100%;
   }
 
-  .hero-title .title {
+  /* .hero-title .title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 70px;
+  } */
+
+  .hero-title .logo {
+    width: 80.6vw;
+    margin-bottom: 3.84vw;
   }
 
   .hero-title .title-jp {
     font-weight: 600;
-    font-size: 3.91vw;
+    /* font-size: 3.91vw; */
+    font-size: 3.6vw;
     line-height: 1.8;
     letter-spacing: .2em;
     padding-left: 2.6vw;
@@ -257,7 +263,8 @@
     line-height: 2.3;
     letter-spacing: .1em;
     margin-top: 4.95vw;
-    margin-bottom: 10.03vw;
+    /* margin-bottom: 10.03vw; */
+    margin-bottom: 7vw;
   }
 
 
@@ -507,6 +514,11 @@
   ==============================================================*/
   .hero-title .title {
     font-size: 10vw;
+    padding-top: 1.1vw;
+  }
+
+  .hero-title .logo {
+    width: 46vw;
     padding-top: 1.1vw;
   }
 
