@@ -43,7 +43,8 @@ body {
     height: 13.8vw;
     position: fixed;
     top: 4.04vw;
-    left: 5.08vw;
+    /* left: 5.08vw; */
+    left: 5.25vw;
     z-index: 2;
   }
 
@@ -51,10 +52,10 @@ body {
     display: none;
   }
 
-  .logo-box img.logo-mark {
+  /* .logo-box img.logo-mark {
     height: 50px;
     margin-right: 10px;
-  }
+  } */
 
   .logo-box img.logo {
     height: 27px;
@@ -185,14 +186,13 @@ body {
 
   .footer .logo-box {
     position: relative;
-    /* width: 177px; */
-    width: 198px;
+    width: 128px;
     margin: 0 auto 10.16vw;
   }
 
-  .footer .logo-box img.logo-mark {
+  /* .footer .logo-box img.logo-mark {
     height: 59px;
-  }
+  } */
 
   .footer .logo-box img.logo {
     height: 30px;
@@ -386,8 +386,9 @@ body {
     display: block;
     /* width: 21.54vw; */
     /* width: 22vw; */
-    width: 26vw;
+    width: 16.5vw;
     margin: 0 auto 4.4vw;
+    padding-left: 10px;
   }
 
   .footer .logo-box img.logo-mark {
