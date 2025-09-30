@@ -490,6 +490,10 @@
     margin-bottom: 10.42vw;
   }
 
+  .sec-info .closed-day br,
+  .sec-info .btn-box.pc-big-only  {
+    display: none;
+  }
 
 
 
@@ -512,13 +516,13 @@
   /*==============================================================
     　　PC_ヒーロー
   ==============================================================*/
-  .hero-title .title {
+  /* .hero-title .title {
     font-size: 10vw;
     padding-top: 1.1vw;
-  }
+  } */
 
   .hero-title .logo {
-    width: 46vw;
+    width: 46.5vw;
     padding-top: 1.1vw;
   }
 
@@ -622,7 +626,6 @@
     width: 2.2vw;
     height: 2.2vw;
     border: 1px solid #ED9E31;
-
     margin-top: .15vw;
     background-size: .73vw .73vw;
   }
@@ -800,7 +803,7 @@
   }
 
   /*==============================================================
-    　　TB_Space　真山の空間
+    　　PC_Space　真山の空間
   ==============================================================*/
   .sec-space {
     max-width: 84.98vw;
@@ -889,6 +892,14 @@
     margin-bottom: 0;
   }
 
+  .info-box .info-item.closed-day span {
+    margin-left: -8px;
+  }
+
+  .sec-info .closed-day br {
+    display: block;
+  }
+
   .map {
     width: 540px;
     height: 550px;
@@ -909,9 +920,308 @@
   }
 
 
+}
+
+@media screen and (min-width: 1400px) {
+  /* パソコン用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+    　　PC-big_ヒーロー
+  ==============================================================*/
+  .hero-title .logo {
+    width: 627px;
+    margin-bottom: 32px;
+    margin-right: 28px;
+  }
+
+  .hero-title .title-jp {
+    font-size: 27px;
+    line-height: 1.8;
+    letter-spacing: .2em;
+    padding-left: 10px;
+  }
+
+  .hero-link {
+    width: 130px;
+    height: 130px;
+    font-size: 19px;
+    line-height: 1.2;
+    bottom: 32px;
+    right: 32px;
+  }
+
+  .hero-link:before {
+    width: 24px;
+    height: 22px;
+    top: -7px;
+  }
+
+  /*==============================================================
+    　　PC-big_共通
+  ==============================================================*/
+  /*=============== 　　見出し　　===============*/
+  /* 縦 タイトル */
+  .sec-about .sec-title {
+    margin-left: 82px;
+    margin-right: -5px;
+  }
+  .sec-menu .sec-title,
+  .sec-commit .sec-title {
+    padding-left: 27px;
+  }
+  /* タイトル（日本語） */
+  .sec-title .title-jp {
+    font-size: 44px;
+    margin-right: 8px;
+  }
+  .sec-about .sec-title .title-jp {
+    font-size: 52px;
+  }
+
+  /* タイトル（英語） */
+  .sec-title .title {
+    font-size: 18px;
+    padding-top: 23px;
+  }
+
+  /* 横 タイトル（英語） */
+  .sec-space .sec-title .title,
+  .sec-info .sec-title .title {
+    font-size: 20px;
+    padding-left: 14px;
+    margin-bottom: 7px;
+  }
+
+  /* ドット */
+  .sec-about .sec-title .title:before,
+  .sec-menu .sec-title .title:before,
+  .sec-commit .sec-title .title:before {
+    width: 6px;
+    height: 6px;
+    top: 9px;
+    left: 0;
+    right: 0;
+  }
+
+  .sec-space .sec-title .title:before,
+  .sec-info .sec-title .title:before {
+    width: 6px;
+    height: 6px;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    left: 0;
+  }
+
+  /*=============== 　　ボタン　　===============*/
+  .btn-box {
+    width: 240px;
+  }
+
+  .btn-box .more-btn {
+    padding: 0 8px 23px 4px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .btn-box .more-btn span {
+    padding-inline-end: 10px;
+  }
+
+  .btn-box .more-btn .arrow {
+    width: 30px;
+    height: 30px;
+    margin-top: 2px;
+    background-size: 10px 10px;
+  }
 
 
+  /*==============================================================
+    　　PC-big_About
+  ==============================================================*/
+  .sec-about {
+    padding-top: 131px;
+    /* padding-bottom: 104px; */
+    padding-bottom: 80px;
+    position: relative;
+    perspective: 1px;
+  }
 
+  .sec-about .text-box {
+    max-width: 1160px;
+  }
+
+  .sec-about .text {
+    font-size: 22px;
+    padding-top: 5px;
+  }
+
+  /*==============================================================
+    　　PC-big_Menu　メニュー
+  ==============================================================*/
+  .sec-menu {
+    padding-top: 119px;
+    /* padding-bottom: 148px; */
+    padding-bottom: 160px;
+  }
+
+  .sec-menu:before {
+    width: 130vw;
+    height: 65vw;
+    border-radius: 65vw 65vw 0 0;
+  }
+
+  /* 下側に反転した形を追加 */
+  .sec-menu:after {
+    width: 130vw;
+    height: 65vw;
+    border-radius: 0 0 65vw 65vw;
+  }
+
+  .menu-bg {
+    max-width: 1160px;
+  }
+
+  .menu-box {
+    margin-top: 69px;
+    margin-bottom: 64px;
+  }
+
+  .menu-item {
+    width: 552px;
+    margin-bottom: 65px;
+  }
+
+  .menu-box .menu-img {
+    height: 350px;
+  }
+
+  .menu-item .title {
+    font-size: 32px;
+    margin-bottom: -9px;
+  }
+
+  .menu-item .text {
+    font-size: 16px;
+  }
+
+  /*=============== 　　minメニュー　　===============*/
+  .item-min .menu-item {
+    width: 355px;
+  }
+
+  .item-min .menu-img {
+    height: 225px;
+  }
+
+  .item-min .title {
+    font-size: 24px;
+    margin: 5px 0 -4px;
+  }
+
+  /*==============================================================
+    　　PC-big_Commitment　こだわり
+  ==============================================================*/
+  .sec-commit {
+    max-width: 1160px;
+    padding-top: 99px;
+  }
+
+  .commit-box {
+    margin-top: 68px;
+  }
+
+  .commit-box .commit-img {
+    margin-right: 80px;
+  }
+
+  .commit-box .text-box {
+    padding-bottom: 15px;
+  }
+
+  .commit-box .title {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+
+  .commit-box .text {
+    font-size: 16px;
+  }
+
+  .sec-commit .btn-box {
+    margin-top: 47px;
+  }
+
+  /*==============================================================
+    　　PC-big_Space　真山の空間
+  ==============================================================*/
+  .sec-space {
+    max-width: 1160px;
+  }
+
+  .sec-space .content {
+    min-height: 390px;
+    padding-top: 156px;
+  }
+
+  .sec-space .sec-title {
+    width: 270px;
+  }
+
+  .space-box {
+    grid-template-columns: repeat(3, 278px);
+    gap: 28px;
+    padding-top: 4px;
+  }
+
+  .sec-space .btn-box {
+    width: 190px;
+    top: auto;
+    bottom: 50px;
+  }
+
+  /*==============================================================
+    　　PC-big_Info　店舗情報
+  ==============================================================*/
+  .sec-info {
+    max-width: 1160px;
+    padding-top: 140px;
+    position: relative;
+    margin-bottom: 300px;
+  }
+
+  .info-box {
+    margin-top: 58px;
+  }
+
+  .info-box .info-item {
+    padding: 19px 0 20px;
+    font-size: 16px;
+  }
+
+  .info-box .info-item dt {
+    width: 220px;
+  }
+
+  .info-box .info-item.closed-day span {
+    margin-left: 0;
+  }
+
+  .sec-info .closed-day br,
+  .sec-info .btn-box.pc-big-none {
+    display: none;
+  }
+
+  .sec-info .btn-box.pc-big-only {
+    display: block;
+  }
+
+  .sec-info .btn-box {
+    position: absolute;
+    width: 240px;
+    bottom: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
 
 
