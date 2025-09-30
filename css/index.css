@@ -55,7 +55,8 @@
   .hero-title .title-jp {
     font-weight: 600;
     /* font-size: 3.91vw; */
-    font-size: 3.55vw;
+    /* font-size: 3.55vw; */
+    font-size: 3.4vw;
     line-height: 1.8;
     letter-spacing: .2em;
     padding-left: 2.6vw;
@@ -506,6 +507,10 @@
   /*==============================================================
     　　TB_ヒーロー
   ==============================================================*/
+  .hero-title .logo {
+    width: 50vw;
+    padding-top: 1.1vw;
+  }
 
 
 }

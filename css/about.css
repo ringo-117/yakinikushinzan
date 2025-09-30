@@ -1,0 +1,163 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media screen and (min-width: 320px) {
+  /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
+
+  /*==============================================================
+  　　準備中画面
+  ==============================================================*/
+  .main-bg {
+    background-color: #edece6;
+    padding: 0 16px;
+    height: 600px;
+    position: relative;
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+  }
+
+  .coming-soon-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 343px;
+    /* margin-top: 24px; */
+    padding: 72px 24px 72px;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+
+  .icon-clock {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 32px;
+  }
+
+  .coming-soon-box h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    letter-spacing: 0.15em;
+  }
+
+  .coming-soon-box p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .maintenance .sec-line {
+    margin-top: 40px;
+  }
+
+
+
+
+  /*==============================================================
+    　　INFO
+  ==============================================================*/
+  /* .company-info {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 12px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+  } */
+
+  .company-info .info-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+    border-bottom: solid 1px #333;
+    padding: 23px;
+  }
+
+  .company-info dt {
+    font-weight: bold;
+    white-space: nowrap;
+    align-content: center;
+  }
+
+  .company-info dd {
+    margin: 0;
+  }
+
+}
+
+@media screen and (min-width: 640px) {
+  /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+  　　TB_準備中画面
+  ==============================================================*/
+  .coming-soon-box {
+    width: 74.97%;
+    padding: 80px 24px 80px;
+    margin-top: 16px;
+    font-weight: 600;
+  }
+
+  .icon-clock {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 28px;
+  }
+
+  .coming-soon-box h1 {
+    font-size: 22px;
+    margin-bottom: 24px;
+    letter-spacing: 0.18em;
+  }
+
+  .coming-soon-box p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+  　　PC_準備中画面
+  ==============================================================*/
+  .coming-soon-box {
+    width: 800px;
+    padding: 92px 24px 96px;
+    margin-top: 40px;
+  }
+
+  .icon-clock {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 32px;
+  }
+
+  .coming-soon-box h1 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    letter-spacing: 0.2em;
+  }
+
+  .coming-soon-box p {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+  /* パソコン用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+    　　main-top（index-other.css）
+  ==============================================================*/
+  .main-top .main-item p {
+    margin-left: 30px;
+  }
+}
