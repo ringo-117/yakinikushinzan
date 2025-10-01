@@ -1,0 +1,350 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media screen and (min-width: 320px) {
+  /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
+
+  .color {
+    color: #ED9E31;
+  }
+  /*==============================================================
+    　　Commitment　こだわり
+  ==============================================================*/
+  .main {
+    overflow: hidden;
+  }
+
+  .main-title {
+    line-height: 1.2;
+    padding: 25.78vw 0 11.33vw;
+    padding-left: 5.21vw;
+    padding-right: 5.21vw;
+  }
+
+  /* タイトル（日本語） */
+  .main-title .title-jp {
+    display: block;
+    font-size: 8.33vw;
+    font-weight: 600;
+    letter-spacing: .1em;
+    margin-top: 1.56vw;
+  }
+
+  /* タイトル（英語） */
+  .main-title .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 4.17vw;
+    line-height: 1.2;
+    letter-spacing: .1em;
+    color: #ED9E31;
+    padding-top: 3.78vw;
+    position: relative;
+    writing-mode: unset;
+    padding-top: 0;
+    padding-left: 2.73vw;
+    margin-bottom: -.52vw;
+  }
+
+  /* ドット */
+  .main-title .title:before {
+    content: "";
+    width: 1.17vw;
+    height: 1.17vw;
+    background: currentColor;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    margin: auto;
+  }
+
+  .main-bg {
+    position: relative;
+    margin-bottom: 80px;
+  }
+
+  .main-bg:before {
+    content: "";
+    width: 260.42vw;
+    height: 130.21vw;
+    /* background: rgba(255, 255, 255, .03); */
+    background: #242424;
+    border-radius: 130.21vw 130.21vw 0 0;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  /* 下側に反転した形を追加 */
+  .main-bg:after {
+    content: "";
+    width: 260.42vw;
+    height: 130.21vw;
+    background: #242424;
+    /* 上下を反転させる */
+    border-radius: 0 0 130.21vw 130.21vw;
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  .main .top {
+    padding-left: 5.21vw;
+    padding-right: 5.21vw;
+  }
+
+  .main .top .commit-img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    aspect-ratio: 3 / 1.3;
+  }
+
+  .main .top .commit-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main .top .text-box .title {
+    font-weight: 500;
+    font-size: 6.25vw;
+    line-height: 1.6;
+    letter-spacing: .1em;
+    margin: 6.51vw 0 3.26vw;
+  }
+
+  .main .top .text-box .text {
+    font-size: 3.52vw;
+    line-height: 2;
+    letter-spacing: .1em;
+  }
+
+
+
+
+  /*=============== 　　content　　===============*/
+  .content {
+    padding-top: 13.8vw;
+    padding-left: 5.21vw;
+    padding-right: 5.21vw;
+    background: #242424;
+  }
+
+  /* .commit-box {
+    margin-top: 10.16vw;
+  } */
+
+  .commit-box .commit-img {
+    width: 100%;
+    height: 64.8vw;
+    margin-bottom: 7.29vw;
+    overflow: hidden;
+  }
+
+  .commit-box .commit-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .commit-box .title {
+    font-weight: 500;
+    font-size: 6.25vw;
+    line-height: 1.6;
+    letter-spacing: .1em;
+    margin-bottom: 3.91vw;
+    margin-right: -.91vw;
+  }
+
+  .commit-box .text {
+    font-size: 3.65vw;
+    line-height: 1.8;
+    margin-bottom: 8.33vw;
+  }
+
+  /* パンくずリスト */
+  .breadcrumbs {
+    /* padding: 11.2vw 5.21vw 5.99vw; */
+    padding: 18vw 5.21vw 5.99vw;
+  }
+
+  .breadcrumbs .list-item {
+    display: inline;
+    font-size: 2.86vw;
+    line-height: 1.8;
+    letter-spacing: .1em;
+    color: #939393;
+  }
+
+  .breadcrumbs .list-item a {
+    color: #fff;
+  }
+
+  .breadcrumbs .list-item a:after {
+    display: inline;
+    content: "/";
+    margin-left: 1.43vw;
+    color: #939393;
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+
+
+}
+
+
+@media screen and (min-width: 640px) {
+  /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
+
+  
+
+  /*==============================================================
+    　　TB_Commitment　こだわり
+  ==============================================================*/
+  .content {
+    max-width: 84.98vw;
+    width: 100%;
+    margin: 0 60px;
+    margin-inline: auto;
+    padding: 0;
+    padding-top: 100px;
+  }
+
+  .commit-box {
+    margin-top: 60px;
+  }
+
+  .commit-box .commit-img {
+    height: 60vw;
+  }
+
+  .commit-box .title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .commit-box .text {
+    font-size: 16.5px;
+    line-height: 2;
+  }
+
+  
+
+
+
+
+
+
+
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
+  
+
+  /*==============================================================
+    　　PC_Commitment　こだわり
+  ==============================================================*/
+  .content {
+    max-width: 84.98vw;
+    width: 100%;
+    margin-inline: auto;
+    padding: 0;
+    padding-top: 7.25vw;
+  }
+
+  .commit-box {
+    display: flex;
+    align-items: center;
+    margin-top: 4.98vw;
+  }
+
+  .commit-box .commit-img {
+    /* height: 40.29vw; */
+    margin-right: 5.86vw;
+    margin-bottom: 0;
+
+    min-width: 540px;
+    height: 550px;
+  }
+
+  .commit-box .text-box {
+    width: 100%;
+    padding-bottom: 1.1vw;
+  }
+
+  .commit-box .title {
+    font-size: 2.34vw;
+    margin-bottom: 2.56vw;
+  }
+
+  .commit-box .text {
+    font-size: 1.17vw;
+    line-height: 1.8;
+    letter-spacing: .1em;
+    margin: 0;
+  }
+
+  .sec-commit .btn-box {
+    justify-content: flex-start;
+    margin: 0;
+    margin-top: 3.44vw;
+  }
+
+ 
+
+
+}
+
+@media screen and (min-width: 1400px) {
+  /* パソコン用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
+  
+
+  /*==============================================================
+    　　PC-big_Commitment　こだわり
+  ==============================================================*/
+  .content {
+    max-width: 1160px;
+    padding-top: 99px;
+  }
+
+  .commit-box {
+    margin-top: 68px;
+  }
+
+  .commit-box .commit-img {
+    margin-right: 80px;
+  }
+
+  .commit-box .text-box {
+    padding-bottom: 15px;
+  }
+
+  .commit-box .title {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+
+  .commit-box .text {
+    font-size: 16px;
+  }
+
+  .sec-commit .btn-box {
+    margin-top: 47px;
+  }
+
+  
+
+
+
+}
