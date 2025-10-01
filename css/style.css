@@ -262,7 +262,9 @@ body {
 
   .header .logo-box {
     height: 6.01vw;
-    top: 3vw;
+    /* top: 3vw; */
+    /* top: 3vw; */
+    top: 4.9vw;
     left: 3.5vw;
   }
 
