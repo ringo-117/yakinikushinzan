@@ -236,16 +236,16 @@
   }
 
   .main-bg:before {
-    width: 150vw;
-    height: 75vw;
-    border-radius: 75vw 75vw 0 0;
+    width: 200vw;
+    height: 100vw;
+    border-radius: 100vw 100vw 0 0;
   }
 
   /* 下側に反転した形を追加 */
   .main-bg:after {
-    width: 150vw;
-    height: 75vw;
-    border-radius: 0 0 75vw 75vw;
+    width: 200vw;
+    height: 100vw;
+    border-radius: 0 0 100vw 100vw;
     bottom: -170px;
   }
 
@@ -294,7 +294,6 @@
 
   /* パンくずリスト */
   .breadcrumbs {
-    /* padding: 11.2vw 5.21vw 5.99vw; */
     padding: 9.5vw 60px 2.5vw;
   }
 
@@ -306,13 +305,6 @@
     margin-right: .37vw;
     margin-left: .81vw;
   }
-
-
-
-
-
-
-
 
 
 }
