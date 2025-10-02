@@ -84,7 +84,7 @@
     width: 260.42vw;
     height: 130.21vw;
     background: #242424;
-    /* 上下を反転させる */
+    /* 上下を反転 */
     border-radius: 0 0 130.21vw 130.21vw;
     position: absolute;
     bottom: -80px;
@@ -302,6 +302,12 @@
     font-size: 12px;
   }
 
+  .breadcrumbs .list-item a:after {
+    margin-right: .37vw;
+    margin-left: .81vw;
+  }
+
+
 
 
 
@@ -317,18 +323,77 @@
   /*==============================================================
     　　PC_Commitment　こだわり
   ==============================================================*/
+  .main-title {
+    line-height: 1.2;
+    padding: 13.19vw 0 6.67vw;
+  }
+
+  /* タイトル（日本語） */
+  .main-title .title-jp {
+    font-size: 3.22vw;
+    margin-top: 1.03vw;
+  }
+
+  /* タイトル（英語） */
+  .main-title .title {
+    font-size: 1.47vw;
+    padding-left: 1.03vw;
+  }
+
+  /* ドット */
+  .main-title .title:before {
+    width: .44vw;
+    height: .44vw;
+    top: .66vw;
+    left: 0;
+  }
+
+  .main-bg:before {
+    width: 260.42vw;
+    height: 130.21vw;
+    border-radius: 130.21vw 130.21vw 0 0;
+  }
+
+  /* 下側に反転した形を追加 */
+  .main-bg:after {
+    width: 260.42vw;
+    height: 130.21vw;
+    border-radius: 0 0 130.21vw 130.21vw;
+  }
+
+  .main .top .text-box .title {
+    font-size: 2.34vw;
+    margin: 3.52vw 0 1.68vw;
+  }
+
+  .main .top .text-box .text {
+    font-size: 1.32vw;
+    line-height: 2;
+    letter-spacing: .1em;
+  }
+
+
+
+  /*=============== 　　content　　===============*/
   .content {
-    max-width: 84.98vw;
     width: 100%;
     margin-inline: auto;
     padding: 0;
-    padding-top: 7.25vw;
+    padding-top: 40px;
   }
 
   .commit-box {
     display: flex;
     align-items: center;
+    margin: 0 auto;
     margin-top: 4.98vw;
+    max-width: 84.98vw;
+  }
+
+  .commit-box.box-02,
+  .commit-box.box-04 {
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   .commit-box .commit-img {
@@ -338,6 +403,13 @@
 
     min-width: 540px;
     height: 550px;
+  }
+
+  .commit-box.box-02 .commit-img,
+  .commit-box.box-04 .commit-img {
+    margin-right: 0;
+    margin-left: 5.86vw;
+
   }
 
   .commit-box .text-box {
@@ -363,25 +435,90 @@
     margin-top: 3.44vw;
   }
 
- 
+  /* パンくずリスト */
+  .breadcrumbs {
+    max-width: 84.98vw;
+    margin: 0 auto;
+    padding: 10vw 0 2vw;
+  }
 
+  .breadcrumbs .list-item {
+    font-size: .95vw;
+  }
 
 }
 
 @media screen and (min-width: 1400px) {
   /* パソコン用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
-  
+
 
   /*==============================================================
     　　PC-big_Commitment　こだわり
   ==============================================================*/
-  .content {
+  .main-title {
     max-width: 1160px;
-    padding-top: 99px;
+    line-height: 1.2;
+    padding: 180px 0 91px;
   }
 
+  /* タイトル（日本語） */
+  .main-title .title-jp {
+    font-size: 44px;
+    margin-top: 14px;
+  }
+
+  /* タイトル（英語） */
+  .main-title .title {
+    font-size: 20px;
+    padding-left: 14px;
+  }
+
+  /* ドット */
+  .main-title .title:before {
+    width: 6px;
+    height: 6px;
+    top: 9px;
+  }
+
+  .main-bg {
+    margin-bottom: 240px;
+  }
+
+  .main-bg:before {
+    width: 240vw;
+    height: 120vw;
+    border-radius: 120vw 120vw 0 0;
+  }
+
+  /* 下側に反転した形を追加 */
+  .main-bg:after {
+    width: 240vw;
+    height: 120vw;
+    border-radius: 0 0 120vw 120vw;
+    bottom: -240px;
+  }
+
+  .main .top {
+    max-width: 1160px;
+  }
+
+  .main .top .commit-img {
+    aspect-ratio: 3 / 1.29;
+  }
+
+  .main .top .text-box .title {
+    font-size: 32px;
+    margin: 48px 0 23px;
+  }
+
+  .main .top .text-box .text {
+    font-size: 18px;
+  }
+
+  /*=============== 　　content　　===============*/
   .commit-box {
-    margin-top: 68px;
+    max-width: 1160px;
+    margin-top: 60px;
   }
 
   .commit-box .commit-img {
@@ -405,7 +542,19 @@
     margin-top: 47px;
   }
 
-  
+  /* パンくずリスト */
+  .breadcrumbs {
+    max-width: 1160px;
+  }
+
+  .breadcrumbs .list-item {
+    font-size: 13px;
+  }
+
+  .breadcrumbs .list-item a:after {
+    margin-right: 5px;
+    margin-left: 11px;
+  }
 
 
 
