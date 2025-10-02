@@ -215,6 +215,7 @@
     letter-spacing: 0;
     margin-right: .59vw;
     margin-left: -7px;
+    margin-top: 1vw;
   }
 
   /* タイトル（英語） */
@@ -442,8 +443,6 @@
 
 @media screen and (min-width: 1400px) {
   /* パソコン用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
-
-
   /*==============================================================
     　　PC-big_Commitment　こだわり
   ==============================================================*/
@@ -537,6 +536,8 @@
   /* パンくずリスト */
   .breadcrumbs {
     max-width: 1160px;
+    padding-top: 120px;
+    padding-bottom: 20px;
   }
 
   .breadcrumbs .list-item {
