@@ -253,7 +253,7 @@
   /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
 
   /*==============================================================
-    　　TB_Info　店舗情報
+    　　TB_Menu　メニュー
   ==============================================================*/
   .main {
     max-width: 84.98vw;
@@ -301,6 +301,11 @@
     font-size: 18px;
   }
 
+  .main .content {
+    padding-top: 11vw;
+  }
+
+
   .main .menu-top .title {
     font-size: 32px;
   }
@@ -309,9 +314,38 @@
     font-size: 16px;
   }
 
+  .menu-list {
+    margin-bottom: 12vw;
+  }
+
   .menu-list .title {
     font-size: 30px;
     line-height: 1;
+    margin-bottom: 46px;
+    padding: 0 0 .26vw 2.8vw;
+  }
+
+  .menu-list .title.long {
+    line-height: 6.5vw;
+  }
+
+  .menu-list .title.long.long-big:before {
+    margin-top: 14px;
+    margin-bottom: 14px;
+  }
+
+  .menu-list .title.long-min {
+    line-height: 1;
+  }
+
+  .menu-list .title:before {
+    width: 3px;
+  }
+
+  
+
+  .menu-list ul .menu-item {
+    padding: 2.5vw .59vw 2.5vw;
   }
 
   .menu-list ul .menu-item .name {
@@ -326,11 +360,6 @@
   .menu-list ul .menu-item .text {
     font-size: 16px;
   }
-
-
-
-
-
 
 
   /* パンくずリスト */
@@ -354,7 +383,7 @@
 @media screen and (min-width: 1024px) {
   /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
   /*==============================================================
-    　　PC_Info　店舗情報
+    　　PC_Menu　メニュー
   ==============================================================*/
   .main {
     padding: 0;
@@ -564,7 +593,7 @@
 @media screen and (min-width: 1400px) {
   /* パソコン用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
   /*==============================================================
-    　　PC-big_Info　店舗情報
+    　　PC-big_Menu　メニュー
   ==============================================================*/
   .main-title {
     max-width: 1160px;

@@ -245,7 +245,8 @@ body {
 @media screen and (min-width: 640px) {
   /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
 
-  .sp-only {
+  .sp-only,
+  .tb-none {
     display: none;
   }
 
@@ -407,7 +408,8 @@ body {
 @media screen and (min-width: 1024px) {
   /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
 
-  .pc-only {
+  .pc-only,
+  .tb-none {
     display: block;
   }
 
