@@ -342,7 +342,9 @@
     width: 3px;
   }
 
-  
+  .menu-list ul .menu-item .left-space.none {
+    margin-left: 0;
+  }
 
   .menu-list ul .menu-item {
     padding: 2.5vw .59vw 2.5vw;
@@ -359,6 +361,8 @@
 
   .menu-list ul .menu-item .text {
     font-size: 16px;
+    margin-top: 4px;
+    margin-bottom: 10px;
   }
 
 
