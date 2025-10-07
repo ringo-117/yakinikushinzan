@@ -174,6 +174,10 @@
     background-color: #ED9E31;
   }
 
+  .menu-list ul {
+    border-top: 1px solid rgba(255, 255, 255, .08);
+  }
+
   .menu-list ul .menu-item {
     border-bottom: 1px solid rgba(255, 255, 255, .08);
     display: grid;
@@ -182,10 +186,6 @@
     /* padding: 3.26vw .78vw 3.91vw 1.04vw; */
     padding: 3.8vw .78vw 3.91vw 1.04vw;
     align-items: center;
-  }
-
-  .menu-list ul {
-    border-top: 1px solid rgba(255, 255, 255, .08);
   }
 
   .menu-list ul .menu-item .name {
@@ -245,10 +245,6 @@
     margin-top: 0;
   }
 
-  /*==============================================================
-    　　Menu-02　盛り合わせ
-  ==============================================================*/
-
 
 }
 
@@ -300,7 +296,42 @@
     top: 7px;
   }
 
-  
+  /* メニューリンク */
+  .menu-nav ul {
+    font-size: 18px;
+  }
+
+  .main .menu-top .title {
+    font-size: 32px;
+  }
+
+  .main .menu-top .text {
+    font-size: 16px;
+  }
+
+  .menu-list .title {
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  .menu-list ul .menu-item .name {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .menu-list ul .menu-item .price {
+    font-size: 18px;
+  }
+
+  .menu-list ul .menu-item .text {
+    font-size: 16px;
+  }
+
+
+
+
+
+
 
   /* パンくずリスト */
   .breadcrumbs {
@@ -332,6 +363,8 @@
     margin-bottom: 12vw;
     margin: 0 auto;
     max-width: none;
+    max-width: 84.98vw;
+    position: relative;
   }
 
   .main-title {
@@ -359,11 +392,161 @@
     left: 0;
   }
 
-  .main .content {
-    position: relative;
+  /* メニューリンク */
+  .menu-nav {
+    position: absolute;
+    top: 0;
+    width: 13.92vw;
+    margin: auto;
+    z-index: 2;
+    margin-left: -19.19vw;
+    /* position: static; */
+    /* transition: all 0.3s; */
+    will-change: transform;
+    transition: none;
   }
 
-  
+  .menu-nav ul {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 1.1vw;
+    /* position: fixed;
+    top: 120px; */
+    /* position: sticky;
+    top: 120px; */
+    
+  }
+
+  .menu-nav.sticky {
+    position: fixed;
+    top: 120px;
+    /* width: 100%; */
+  }
+
+  .menu-nav.ended {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    /* width: 100%; */
+  }
+
+  .menu-nav ul li:nth-child(2) {
+    border-top: none;
+  }
+
+  .menu-nav ul li a {
+    display: block;
+    font-size: 1.25vw;
+    padding: 1.1vw 0 1.25vw 1.32vw;
+    letter-spacing: .1em;
+  }
+
+  .menu-nav ul li.active a:before {
+    display: block;
+    width: .37vw;
+    height: .37vw;
+    left: .37vw;
+  }
+
+  .main .content {
+    position: relative;
+    padding-left: 19.19vw;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .main .menu-top {
+    margin-bottom: 5.86vw;
+    margin-top: -1.17vw;
+  }
+
+  .main .menu-top .title {
+    font-size: 2.34vw;
+    margin-bottom: .88vw;
+  }
+
+  .main .menu-top .text {
+    font-size: 1.03vw;
+  }
+
+  .main .menu-top .menu-img {
+    margin-top: 1.83vw;
+    padding-right: 1.83vw;
+    aspect-ratio: 16 / 8.75;
+  }
+
+  .menu-list {
+    margin-bottom: 5.71vw;
+  }
+
+  .menu-list.last {
+    margin-bottom: 0;
+  }
+
+  .menu-list .title {
+    font-size: 2.05vw;
+    margin-bottom: 2.93vw;
+    padding: 0 0 .29vw 1.32vw;
+  }
+
+  .menu-list .title.long {
+    line-height: 1;
+  }
+
+  .menu-list .title:before {
+    width: .22vw;
+  }
+
+  .menu-list ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2.34vw;
+    border-top: none;
+  }
+
+  .menu-list ul li:nth-child(-n+2) {
+    padding-top: .51vw;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    padding: 2.12vw .59vw 2.49vw;
+  }
+
+  .menu-list ul .menu-item {
+    /* padding: 1.61vw .59vw 2.49vw; */
+    padding: 2.2vw .59vw 2.2vw;
+  }
+
+  .menu-list ul .menu-item .name {
+    font-size: 1.32vw;
+    line-height: 2.2vw;
+    letter-spacing: .1em;
+  }
+
+  .menu-list ul .menu-item .price {
+    font-size: 1.17vw;
+    line-height: 2.2vw;
+    padding-left: 1.1vw;
+    letter-spacing: .1em;
+  }
+
+  .menu-list ul .menu-item .text {
+    font-size: 1.03vw;
+    margin-top: .44vw;
+    letter-spacing: .1em;
+  }
+
+  .menu-list ul .menu-item.margin-top .name,
+  .menu-list ul .menu-item.margin-top .price {
+    padding-top: 14px;
+  }
+
+  /* menu-06　調整 */
+  .menu-list ul .menu-item.item-02 .text {
+    margin-top: -15px;
+  }
+  .menu-list ul .menu-item.item-04 .name,
+  .menu-list ul .menu-item.item-04 .price {
+    padding-top: 22px;
+  }
+
 
   /* パンくずリスト */
   .breadcrumbs {
@@ -415,7 +598,106 @@
     /* margin-bottom: 300px; */
   }
 
-  
+  /* メニューリンク */
+  .menu-nav {
+    width: 190px;
+    margin-left: -262px;
+  }
+
+  .menu-nav ul {
+    padding-top: 15px;
+  }
+
+  .menu-nav ul li a {
+    font-size: 17px;
+    padding: 15px 0 17px 18px;
+  }
+
+  .menu-nav ul li.active a:before {
+    width: 5px;
+    height: 5px;
+    left: 5px;
+  }
+
+  .main .content {
+    padding-left: 262px;
+  }
+
+  .main .menu-top {
+    margin-bottom: 80px;
+    margin-top: -16px;
+  }
+
+  .main .menu-top .title {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .main .menu-top .text {
+    font-size: 14px;
+  }
+
+  .main .menu-top .menu-img {
+    margin-top: 25px;
+    margin-right: 25px;
+  }
+
+  .menu-list {
+    margin-bottom: 78px;
+  }
+
+  .menu-list .title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    padding: 0 0 4px 18px;
+  }
+
+  .menu-list .title:before {
+    width: 3px;
+  }
+
+  .menu-list ul {
+    gap: 0 32px;
+  }
+
+  .menu-list ul li:nth-child(-n+2) {
+    padding-top: 7px;
+    padding: 28px 8px 28px;
+  }
+
+  .menu-list ul .menu-item {
+    padding: 28px 8px 28px;
+  }
+
+  .menu-list ul .menu-item .name {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .menu-list ul .menu-item .price {
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 15px;
+  }
+
+  .menu-list ul .menu-item .text {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  .menu-list ul .menu-item.margin-top.none .name,
+  .menu-list ul .menu-item.margin-top.none .price {
+    padding-top: 0;
+  }
+
+
+
+
+
+
+
+
+
 
   /* パンくずリスト */
   .breadcrumbs {
