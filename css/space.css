@@ -1,0 +1,495 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media screen and (min-width: 320px) {
+  /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
+
+  .color {
+    color: #ED9E31;
+  }
+  /*==============================================================
+    　　Space　真山の空間
+  ==============================================================*/
+  .main {
+    overflow: hidden;
+  }
+
+  .main-title {
+    line-height: 1.2;
+    padding: 25.78vw 0 11.33vw;
+    padding-left: 5.21vw;
+    padding-right: 5.21vw;
+  }
+
+  /* タイトル（日本語） */
+  .main-title .title-jp {
+    display: block;
+    font-size: 8.33vw;
+    font-weight: 600;
+    letter-spacing: .1em;
+    margin-top: 1.56vw;
+  }
+
+  /* タイトル（英語） */
+  .main-title .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 4.17vw;
+    line-height: 1.2;
+    letter-spacing: .1em;
+    color: #ED9E31;
+    padding-top: 3.78vw;
+    position: relative;
+    writing-mode: unset;
+    padding-top: 0;
+    padding-left: 2.73vw;
+    margin-bottom: -.52vw;
+  }
+
+  /* ドット */
+  .main-title .title:before {
+    content: "";
+    width: 1.17vw;
+    height: 1.17vw;
+    background: currentColor;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    margin: auto;
+  }
+
+
+  /*=============== 　　content　　===============*/
+  .content {
+    /* padding-top: 13.8vw; */
+    /* padding-top: 5vw; */
+    padding-left: 5.21vw;
+    padding-right: 5.21vw;
+  }
+
+  .space-item {
+    position: relative;
+  }
+
+  .space-item .item-img {
+    width: 100%;
+    height: 64.8vw;
+    margin-bottom: 7.29vw;
+    overflow: hidden;
+  }
+
+  .space-item.end .item-img{
+    margin-bottom: 0;
+  }
+
+  .space-item .item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .space-item .text {
+    /* font-size: 3.65vw; */
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* background: rgba(0, 0, 0, 0.3); */
+    padding: 12px 12px 8px;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,   /* 上は薄め */
+      rgba(0, 0, 0, 0.3) 40%
+    );
+    width: 100%;
+  }
+
+  /* パンくずリスト */
+  .breadcrumbs {
+    /* padding: 11.2vw 5.21vw 5.99vw; */
+    padding: 18vw 5.21vw 5.99vw;
+  }
+
+  .breadcrumbs .list-item {
+    display: inline;
+    font-size: 2.86vw;
+    line-height: 1.8;
+    letter-spacing: .1em;
+    color: #939393;
+  }
+
+  .breadcrumbs .list-item a {
+    color: #fff;
+  }
+
+  .breadcrumbs .list-item a:after {
+    display: inline;
+    content: "/";
+    margin-left: 1.43vw;
+    color: #939393;
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+
+
+}
+
+
+@media screen and (min-width: 640px) {
+  /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
+
+  /*==============================================================
+    　　TB_Space　真山の空間
+  ==============================================================*/
+  .main-title {
+    max-width: 84.98vw;
+    width: 100%;
+    margin-inline: auto;
+    padding: 18vw 0 9vw;
+  }
+
+  /* タイトル（日本語） */
+  .main-title .title-jp {
+    /* font-size: 34px; */
+    font-size: 36px;
+    line-height: 1.45;
+    letter-spacing: 0;
+    margin-right: .59vw;
+    margin-left: -7px;
+    margin-top: 1vw;
+  }
+
+  /* タイトル（英語） */
+  .main-title .title {
+    /* font-size: 24px; */
+    font-size: 15px;
+    padding-left: 1.8vw;
+  }
+
+  /* ドット */
+  .main-title .title:before {
+    width: 5px;
+    height: 5px;
+    top: 7px;
+  }
+
+  /*=============== 　　content　　===============*/
+  .content {
+    width: 100%;
+    margin: 0;
+    margin-inline: auto;
+    /* padding: 100px 60px 0; */
+    padding: 0 60px 0;
+
+    display: grid;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr; */
+
+    grid-template:
+      "item-01 item-01" auto
+      "item-02 item-03" auto
+      "item-04 item-04" auto
+      "item-05 item-06" auto
+      "item-07 item-07" auto
+      "item-08 item-08" auto
+      / 1fr 1fr;
+  }
+
+  .space-item.item-01 {
+    grid-area: item-01;
+  }
+  .space-item.item-02 {
+    grid-area: item-02;
+  }
+  .space-item.item-03 {
+    grid-area: item-03;
+  }
+  .space-item.item-04 {
+    grid-area: item-04;
+  }
+  .space-item.item-05 {
+    grid-area: item-05;
+  }
+  .space-item.item-06 {
+    grid-area: item-06;
+  }
+  .space-item.item-07 {
+    grid-area: item-07;
+  }
+  .space-item.item-08 {
+    grid-area: item-08;
+  }
+
+  .space-item .item-img {
+    height: 60vw;
+    margin-bottom: 4vw;
+  }
+
+
+
+
+  /* パンくずリスト */
+  .breadcrumbs {
+    padding: 9.5vw 60px 2.5vw;
+  }
+
+  .breadcrumbs .list-item {
+    font-size: 12px;
+  }
+
+  .breadcrumbs .list-item a:after {
+    margin-right: .37vw;
+    margin-left: .81vw;
+  }
+
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+    　　PC_Space　真山の空間
+  ==============================================================*/
+  .main-title {
+    line-height: 1.2;
+    padding: 13.19vw 0 6.67vw;
+  }
+
+  /* タイトル（日本語） */
+  .main-title .title-jp {
+    font-size: 3.22vw;
+    margin-top: 1.03vw;
+  }
+
+  /* タイトル（英語） */
+  .main-title .title {
+    font-size: 1.47vw;
+    padding-left: 1.03vw;
+  }
+
+  /* ドット */
+  .main-title .title:before {
+    width: .44vw;
+    height: .44vw;
+    top: .66vw;
+    left: 0;
+  }
+
+  .main-bg:before {
+    width: 260.42vw;
+    height: 130.21vw;
+    border-radius: 130.21vw 130.21vw 0 0;
+  }
+
+  /* 下側に反転した形を追加 */
+  .main-bg:after {
+    width: 260.42vw;
+    height: 130.21vw;
+    border-radius: 0 0 130.21vw 130.21vw;
+  }
+
+  .main .top .text-box .title {
+    font-size: 2.34vw;
+    margin: 3.52vw 0 1.68vw;
+  }
+
+  .main .top .text-box .text {
+    font-size: 1.32vw;
+    line-height: 2;
+    letter-spacing: .1em;
+  }
+
+
+
+  /*=============== 　　content　　===============*/
+  .content {
+    width: 100%;
+    margin-inline: auto;
+    padding: 0;
+    padding-top: 40px;
+  }
+
+  .commit-box {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 4.98vw;
+    max-width: 84.98vw;
+  }
+
+  .commit-box.box-02,
+  .commit-box.box-04 {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .commit-box .commit-img {
+    /* height: 40.29vw; */
+    margin-right: 5.86vw;
+    margin-bottom: 0;
+
+    min-width: 540px;
+    height: 550px;
+  }
+
+  .commit-box.box-02 .commit-img,
+  .commit-box.box-04 .commit-img {
+    margin-right: 0;
+    margin-left: 5.86vw;
+
+  }
+
+  .commit-box .text-box {
+    width: 100%;
+    padding-bottom: 1.1vw;
+  }
+
+  .commit-box .title {
+    font-size: 2.34vw;
+    margin-bottom: 2.56vw;
+  }
+
+  .commit-box .text {
+    font-size: 1.17vw;
+    line-height: 1.8;
+    letter-spacing: .1em;
+    margin: 0;
+  }
+
+  .sec-commit .btn-box {
+    justify-content: flex-start;
+    margin: 0;
+    margin-top: 3.44vw;
+  }
+
+  /* パンくずリスト */
+  .breadcrumbs {
+    max-width: 84.98vw;
+    margin: 0 auto;
+    padding: 10vw 0 2vw;
+  }
+
+  .breadcrumbs .list-item {
+    font-size: .95vw;
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+  /* パソコン用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+    　　PC-big_Space　真山の空間
+  ==============================================================*/
+  .main-title {
+    max-width: 1160px;
+    line-height: 1.2;
+    padding: 180px 0 91px;
+  }
+
+  /* タイトル（日本語） */
+  .main-title .title-jp {
+    font-size: 44px;
+    margin-top: 14px;
+  }
+
+  /* タイトル（英語） */
+  .main-title .title {
+    font-size: 20px;
+    padding-left: 14px;
+  }
+
+  /* ドット */
+  .main-title .title:before {
+    width: 6px;
+    height: 6px;
+    top: 9px;
+  }
+
+  .main-bg {
+    margin-bottom: 240px;
+  }
+
+  .main-bg:before {
+    width: 240vw;
+    height: 120vw;
+    border-radius: 120vw 120vw 0 0;
+  }
+
+  /* 下側に反転した形を追加 */
+  .main-bg:after {
+    width: 240vw;
+    height: 120vw;
+    border-radius: 0 0 120vw 120vw;
+    bottom: -240px;
+  }
+
+  .main .top {
+    max-width: 1160px;
+  }
+
+  .main .top .commit-img {
+    aspect-ratio: 3 / 1.29;
+  }
+
+  .main .top .text-box .title {
+    font-size: 32px;
+    margin: 48px 0 23px;
+  }
+
+  .main .top .text-box .text {
+    font-size: 18px;
+  }
+
+  /*=============== 　　content　　===============*/
+  .commit-box {
+    max-width: 1160px;
+    margin-top: 60px;
+  }
+
+  .commit-box .commit-img {
+    margin-right: 80px;
+  }
+
+  .commit-box .text-box {
+    padding-bottom: 15px;
+  }
+
+  .commit-box .title {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+
+  .commit-box .text {
+    font-size: 16px;
+  }
+
+  .sec-commit .btn-box {
+    margin-top: 47px;
+  }
+
+  /* パンくずリスト */
+  .breadcrumbs {
+    max-width: 1160px;
+    padding-top: 120px;
+    padding-bottom: 20px;
+  }
+
+  .breadcrumbs .list-item {
+    font-size: 13px;
+  }
+
+  .breadcrumbs .list-item a:after {
+    margin-right: 5px;
+    margin-left: 11px;
+  }
+
+
+
+}
