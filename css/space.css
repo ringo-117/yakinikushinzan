@@ -162,7 +162,7 @@
     line-height: 1.45;
     letter-spacing: 0;
     margin-right: .59vw;
-    margin-left: -7px;
+    margin-left: -2px;
     margin-top: 1vw;
   }
 
@@ -183,23 +183,22 @@
   /*=============== 　　content　　===============*/
   .content {
     width: 100%;
+    max-width: 84.98vw;
     margin: 0;
     margin-inline: auto;
     /* padding: 100px 60px 0; */
-    padding: 0 60px 0;
+    padding: 0;
 
     display: grid;
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr; */
-
     grid-template:
       "item-01 item-01" auto
       "item-02 item-03" auto
       "item-04 item-04" auto
       "item-05 item-06" auto
       "item-07 item-07" auto
-      "item-08 item-08" auto
+      "item-08 auto" auto
       / 1fr 1fr;
+    gap: 25px;
   }
 
   .space-item.item-01 {
@@ -228,12 +227,33 @@
   }
 
   .space-item .item-img {
-    height: 60vw;
-    margin-bottom: 4vw;
+    /* height: 400px; */
+    margin-bottom: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    aspect-ratio: 3 / 1.3;
   }
 
+  .space-item.item-02 .item-img,
+  .space-item.item-03 .item-img,
+  .space-item.item-05 .item-img,
+  .space-item.item-06 .item-img,
+  .space-item.item-08 .item-img {
+    aspect-ratio: auto;
+    height: 36vw;
+  }
 
-
+  .space-item .text {
+    font-size: 14px;
+    padding: 20px 20px 12px;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,   /* 上は薄め */
+      rgba(0, 0, 0, 0.5) 40%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+  }
 
   /* パンくずリスト */
   .breadcrumbs {
@@ -283,91 +303,44 @@
     left: 0;
   }
 
-  .main-bg:before {
-    width: 260.42vw;
-    height: 130.21vw;
-    border-radius: 130.21vw 130.21vw 0 0;
-  }
-
-  /* 下側に反転した形を追加 */
-  .main-bg:after {
-    width: 260.42vw;
-    height: 130.21vw;
-    border-radius: 0 0 130.21vw 130.21vw;
-  }
-
-  .main .top .text-box .title {
-    font-size: 2.34vw;
-    margin: 3.52vw 0 1.68vw;
-  }
-
-  .main .top .text-box .text {
-    font-size: 1.32vw;
-    line-height: 2;
-    letter-spacing: .1em;
-  }
-
-
-
   /*=============== 　　content　　===============*/
   .content {
     width: 100%;
     margin-inline: auto;
     padding: 0;
-    padding-top: 40px;
+
+    grid-template:
+      "item-01 item-01 item-01 item-01 item-01 item-01" auto
+      "item-02 item-02 item-03 item-03 item-04 item-04" auto
+      "item-05 item-05 item-05 item-05 item-05 item-05" auto
+      "item-06 item-06 item-06 item-07 item-07 item-07" auto
+      "item-08 item-08 item-08 item-08 item-08 item-08" auto
+      / 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 
-  .commit-box {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 4.98vw;
-    max-width: 84.98vw;
+  /* ３列 */
+  .space-item.item-02 .item-img,
+  .space-item.item-03 .item-img,
+  .space-item.item-04 .item-img {
+    height: 380px;
   }
 
-  .commit-box.box-02,
-  .commit-box.box-04 {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+  /* ２列 */
+  .space-item.item-06 .item-img,
+  .space-item.item-07 .item-img {
+    height: 350px;
   }
 
-  .commit-box .commit-img {
-    /* height: 40.29vw; */
-    margin-right: 5.86vw;
-    margin-bottom: 0;
-
-    min-width: 540px;
-    height: 550px;
+  /* １列 */
+  .space-item.item-05 .item-img,
+  .space-item.item-08 .item-img {
+    height: auto;
+    aspect-ratio: 3 / 1.3;
   }
 
-  .commit-box.box-02 .commit-img,
-  .commit-box.box-04 .commit-img {
-    margin-right: 0;
-    margin-left: 5.86vw;
-
-  }
-
-  .commit-box .text-box {
-    width: 100%;
-    padding-bottom: 1.1vw;
-  }
-
-  .commit-box .title {
-    font-size: 2.34vw;
-    margin-bottom: 2.56vw;
-  }
-
-  .commit-box .text {
-    font-size: 1.17vw;
-    line-height: 1.8;
-    letter-spacing: .1em;
-    margin: 0;
-  }
-
-  .sec-commit .btn-box {
-    justify-content: flex-start;
-    margin: 0;
-    margin-top: 3.44vw;
+  .space-item .text {
+    font-size: 14px;
+    padding: 20px 25px 12px;
   }
 
   /* パンくずリスト */
@@ -413,67 +386,34 @@
     top: 9px;
   }
 
-  .main-bg {
-    margin-bottom: 240px;
-  }
-
-  .main-bg:before {
-    width: 240vw;
-    height: 120vw;
-    border-radius: 120vw 120vw 0 0;
-  }
-
-  /* 下側に反転した形を追加 */
-  .main-bg:after {
-    width: 240vw;
-    height: 120vw;
-    border-radius: 0 0 120vw 120vw;
-    bottom: -240px;
-  }
-
-  .main .top {
-    max-width: 1160px;
-  }
-
-  .main .top .commit-img {
-    aspect-ratio: 3 / 1.29;
-  }
-
-  .main .top .text-box .title {
-    font-size: 32px;
-    margin: 48px 0 23px;
-  }
-
-  .main .top .text-box .text {
-    font-size: 18px;
-  }
-
   /*=============== 　　content　　===============*/
-  .commit-box {
+  .content {
+    width: 100%;
     max-width: 1160px;
-    margin-top: 60px;
   }
 
-  .commit-box .commit-img {
-    margin-right: 80px;
+  /* １列 */
+  .space-item.item-01 .item-img,
+  .space-item.item-05 .item-img,
+  .space-item.item-08 .item-img {
+    aspect-ratio: 3 / 1.1;
   }
 
-  .commit-box .text-box {
-    padding-bottom: 15px;
+  /* ２列 */
+  .space-item.item-06 .item-img,
+  .space-item.item-07 .item-img {
+    height: 350px;
   }
 
-  .commit-box .title {
-    font-size: 32px;
-    margin-bottom: 35px;
+  .space-item .text {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,   /* 上は薄め */
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
   }
 
-  .commit-box .text {
-    font-size: 16px;
-  }
-
-  .sec-commit .btn-box {
-    margin-top: 47px;
-  }
 
   /* パンくずリスト */
   .breadcrumbs {
