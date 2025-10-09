@@ -420,6 +420,14 @@
     margin-left: 11px;
   }
 
+  /* ==================== アニメーション ================== */
+  .info-item a {
+    transition: opacity 0.3s;
+  }
+  .info-item a:hover {
+    opacity: 0.65;
+  }
+
 
 
 }

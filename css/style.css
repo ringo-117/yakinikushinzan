@@ -683,6 +683,43 @@ html {
     padding-top: 57px;
   }
 
+  /* ==================== アニメーション ================== */
+  /* ロゴ */
+  .logo-box a {
+    transition: opacity 0.3s;
+  }
+  .logo-box a:hover {
+    opacity: 0.6;
+  }
+
+  /* ページリンク */
+  .nav-list a,
+  .footer .link-box a {
+    transition: opacity 0.3s;
+  }
+  .nav-list a:hover,
+  .footer .link-box a:hover {
+    opacity: 0.7;
+  }
+
+  /* ボタン */
+  .btn-box .more-btn {
+    transition: color .3s ease-out;
+  }
+  .btn-box .more-btn:hover {
+    color: #ED9E31;
+  }
+  .btn-box .more-btn:hover .arrow {
+    transform: translateX(8px);
+  }
+
+  /* パンくずリスト */
+  .breadcrumbs .list-item a {
+    transition: opacity 0.3s;
+  }
+  .breadcrumbs .list-item a:hover {
+    opacity: 0.6;
+  }
 
 
 

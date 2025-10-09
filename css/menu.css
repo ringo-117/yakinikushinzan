@@ -433,8 +433,6 @@
     margin: auto;
     z-index: 2;
     margin-left: -19.19vw;
-    /* position: static; */
-    /* transition: all 0.3s; */
     will-change: transform;
     transition: none;
   }
@@ -442,11 +440,6 @@
   .menu-nav ul {
     grid-template-columns: repeat(1, 1fr);
     padding-top: 1.1vw;
-    /* position: fixed;
-    top: 120px; */
-    /* position: sticky;
-    top: 120px; */
-    
   }
 
   .menu-nav.sticky {
@@ -723,15 +716,6 @@
     padding-top: 0;
   }
 
-
-
-
-
-
-
-
-
-
   /* パンくずリスト */
   .breadcrumbs {
     max-width: 1160px;
@@ -746,6 +730,14 @@
   .breadcrumbs .list-item a:after {
     margin-right: 5px;
     margin-left: 11px;
+  }
+
+  /* ==================== アニメーション ================== */
+  .menu-nav a {
+    transition: color .3s ease-out;
+  }
+  .menu-nav a:hover {
+    color: #ED9E31;
   }
 
 
