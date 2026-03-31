@@ -13,6 +13,7 @@
     overscroll-behavior: none;
   }
 
+  /* コメントアウト（GWの営業案内） */
   /* .modal-container,
   .modal-bg {
     touch-action: none;
@@ -42,6 +43,7 @@
 
   .modal-container .modal-scroll {
     position: absolute;
+    /* コメントアウト（GWの営業案内） */
     /* top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
@@ -232,7 +234,7 @@
     left: 50%;
     transform: translateX(-50%);
     margin: 0 auto;
-    width: 330px;
+    width: 335px;
     /* background-color: #000; */
     padding: 0;
   }

@@ -170,21 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// 追加（GWの営業案内）
-// --- ビューポート対策 ---
-// function setVh() {
-//   const vh = (window.visualViewport?.height || window.innerHeight) * 0.01;
-//   document.documentElement.style.setProperty('--vh', `${vh}px`);
-// }
-
-// window.addEventListener('load', setVh);
-// window.addEventListener('resize', setVh);
-
-// // 関数呼び出し名を正しく統一
-// setVh();
-
-
-
 
 // モーダル
 // document.addEventListener('DOMContentLoaded', () => {
