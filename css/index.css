@@ -218,7 +218,7 @@
 
     z-index: 999;
     opacity: 0;
-    pointer-events: none;
+    /* pointer-events: none; */
     transition: opacity 0.3s;
   }
 
@@ -232,13 +232,13 @@
     left: 50%;
     transform: translateX(-50%);
     margin: 0 auto;
-    width: 340px;
+    width: 330px;
     /* background-color: #000; */
     padding: 0;
   }
 
   .modal-scroll__inner {
-    margin: 40px 0 40px;
+    margin: 60px 0;
     background-color: #000;
     border: solid 1px #000;
     padding-bottom: 44px;
