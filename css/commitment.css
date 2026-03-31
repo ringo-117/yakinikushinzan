@@ -109,6 +109,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 0% 50%;
   }
 
   .main .top .text-box .title {
@@ -144,6 +145,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  .commit-box.box-01 .commit-img img {
+    object-position: 40% 0%;
+  }
+  .commit-box.box-02 .commit-img img {
+    object-position: 45% 0%;
+  }
+  .commit-box.box-03 .commit-img img {
+    object-position: 0% 70%;
+    /* scale: 1.03; */
   }
 
   .commit-box .title {
@@ -283,6 +294,15 @@
     margin-bottom: 4vw;
   }
 
+  .commit-box.box-01 .commit-img img {
+    object-position: 32% 0%;
+  }
+  .commit-box.box-03 .commit-img img {
+    object-position: 0% 100%;
+    scale: 1.02;
+    padding-left: 12px;
+  }
+
   .commit-box .title {
     font-size: 30px;
     margin-bottom: 28px;
@@ -354,6 +374,10 @@
     border-radius: 0 0 130.21vw 130.21vw;
   }
 
+  .main .top .commit-img img {
+    object-position: 0% 50%;
+  }
+
   .main .top .text-box .title {
     font-size: 2.34vw;
     margin: 3.52vw 0 1.68vw;
@@ -396,6 +420,18 @@
 
     min-width: 540px;
     height: 550px;
+  }
+
+  .commit-box.box-01 .commit-img img {
+    object-position: 70% 0%;
+  }
+  .commit-box.box-02 .commit-img img {
+    object-position: 55% 0%;
+  }
+  .commit-box.box-03 .commit-img img {
+    object-position: 50% 70%;
+    scale: 1;
+    padding-left: 0;
   }
 
   .commit-box.box-02 .commit-img,

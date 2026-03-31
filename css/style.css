@@ -157,12 +157,67 @@ html {
   }
 
   .nav-item {
-    font-size: 3.65vw;
+    /* font-size: 3.65vw; */
+    /* font-size: 4.3vw; */
+    /* font-size: 14.6px; */
+    font-size: 15px;
     font-weight: 500;
     position: relative;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
+    margin-bottom: 30px;
   }
 
+  .nav-item.policy {
+    width: 100%;
+    white-space: nowrap;
+    /* padding-top: .65vw; */
+    padding-top: 4px;
+    margin-bottom: 4.3vw;
+    /* font-size: 3.91vw; */
+    font-size: 15px;
+    color: rgba(255, 255, 255, .3);
+  }
+
+  .nav-item.list-btn img {
+    width: 15px;
+    transform: scale(-1, 1);
+  }
+
+  .nav-item.list-btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* height: 16.28vw; */
+    height: 61px;
+    border: 1px solid currentColor;
+    border-radius: 9.11vw;
+    font-weight: 500;
+    /* font-size: 4.17vw; */
+    font-size: 15.5px;
+    line-height: 1;
+    padding: 0 6.25vw .52vw;
+    position: relative;
+    margin-top: 44px;
+  }
+  .nav-item.list-btn a {
+    width: 100%;
+    height: 100%;
+    /* align-content: center; */
+    padding-top: 21px;
+  }
+
+  .nav-item.list-btn a:after {
+    content: "";
+    width: 18px;
+    height: 19px;
+    background: url(../img/icon-tel-02.webp) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: 5.08vw;
+    bottom: 0;
+    margin: auto;
+  }
 
   /*==============================================================
     　　フッター
@@ -254,7 +309,8 @@ html {
   /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
 
   .sp-only,
-  .tb-none {
+  .tb-none,
+  .nav-item.list-btn {
     display: none;
   }
 
@@ -320,22 +376,35 @@ html {
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
-    padding-top: 37vh;
+    /* padding-top: 37vh; */
+    padding-top: 36vh;
+    margin-left: 10px;
   }
 
   .nav-list .nav-item {
     writing-mode: vertical-rl;
-    margin-left: 2.12vw;
+    /* margin-left: 2.12vw; */
+    margin-left: 18.5px;
   }
 
   .nav-list .nav-item a {
-    font-size: 17px;
+    /* font-size: 17px; */
+    font-size: 17.8px;
     display: block;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: .2em;
     margin-right: 3.59vw;
   }
+
+  .nav-item.policy  {
+    width: 50px;
+    padding-top: 0;
+  }
+  .nav-item.policy a  {
+    margin-right: 32px;
+  }
+
 
 
   /*==============================================================

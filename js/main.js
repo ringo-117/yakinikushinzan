@@ -78,3 +78,144 @@ window.addEventListener('scroll', () => {
 });
 
 
+// 年末年始：スクロールモーダル
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollModal = document.getElementById('scroll-modal');
+  const modalBg = document.querySelector('.modal-bg');
+
+  let isShown = false;
+  let isClosed = false;
+  let hasScrolled = false;
+
+  // スクロール停止用
+  // const preventScroll = (e) => {
+  //   e.preventDefault();
+  // };
+
+
+
+  // 追加（GWの営業案内）
+  const preventScroll = (e) => {
+  // モーダル内ならスクロール許可
+    if (e.target.closest('.modal-scroll')) return;
+
+    e.preventDefault();
+  };
+
+
+
+  function disableScroll() {
+    document.addEventListener('wheel', preventScroll, { passive: false });
+    document.addEventListener('touchmove', preventScroll, { passive: false });
+  }
+
+  function enableScroll() {
+    document.removeEventListener('wheel', preventScroll);
+    document.removeEventListener('touchmove', preventScroll);
+  }
+
+  function getScrollTrigger() {
+    const width = window.innerWidth;
+
+    if (width <= 767) {
+      return 100;
+    } else if (width <= 1024) {
+      return 100;
+    } else {
+      return 140;
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!hasScrolled && window.scrollY > 0) {
+      hasScrolled = true;
+    }
+
+    if (!hasScrolled || isShown || isClosed) return;
+
+    if (window.scrollY > getScrollTrigger()) {
+      scrollModal.classList.add('active');
+      modalBg.classList.add('active');
+      disableScroll(); // ← ここが重要
+
+      isShown = true;
+    }
+  });
+
+  scrollModal.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', closeModal);
+  });
+
+
+
+  // 追加
+  scrollModal.addEventListener('click', (e) => {
+    // innerの中じゃなければ閉じる
+    if (!e.target.closest('.modal-scroll__inner')) {
+      closeModal();
+    }
+  });
+
+
+
+  modalBg.addEventListener('click', closeModal);
+
+  function closeModal() {
+    scrollModal.classList.remove('active');
+    modalBg.classList.remove('active');
+    enableScroll(); // ← 元に戻す
+
+    isClosed = true;
+  }
+});
+
+
+
+
+// モーダル
+// document.addEventListener('DOMContentLoaded', () => {
+//   const modalBg = document.querySelector('.modal-bg');
+//   const modals = document.querySelectorAll('.modal-container');
+
+//   // 開く処理
+//   document.querySelectorAll('.modal-open').forEach(btn => {
+//     btn.addEventListener('click', () => {
+//       const targetId = btn.dataset.target;
+//       const targetModal = document.getElementById(targetId);
+//       if (targetModal) {
+//         targetModal.classList.add('active');
+//         modalBg.classList.add('active');
+//         document.body.style.overflow = 'hidden'; // ← スクロール禁止
+//       }
+//     });
+//   });
+
+//   // 閉じる処理（背景クリック）
+//   modalBg.addEventListener('click', () => {
+//     closeModal();
+//   });
+
+//   // 閉じる処理（ボタン）
+//   document.querySelectorAll('.modal-close').forEach(btn => {
+//     btn.addEventListener('click', () => {
+//       closeModal();
+//     });
+//   });
+
+//   // モーダル外クリックで閉じる
+//   modals.forEach(modal => {
+//     modal.addEventListener('click', (e) => {
+//       // modal-scroll の中身をクリックしたときは閉じない
+//       if (e.target === modal) {
+//         closeModal();
+//       }
+//     });
+//   });
+
+//   // 共通の閉じる関数
+//   function closeModal() {
+//     modals.forEach(m => m.classList.remove('active'));
+//     modalBg.classList.remove('active');
+//     document.body.style.overflow = ''; // ← スクロール再開
+//   }
+// });
